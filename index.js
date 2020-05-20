@@ -1,8 +1,11 @@
 const express = require("express");
+
 let app = new express();
 
+var homepage = require("./homepage");
+
 app.get("/", function(req, res) {
-    res.send("<html><center>HELLO WORLD</center></html>");
+    res.send(homepage.homepage);
 });
 
 app.get("/about", function(req, res) {
