@@ -21,7 +21,7 @@ app.get("*", function(req, res) {
     res.send("Not have this page 404");
 });
 
-let port = 8080;
+let port = 1234;
 app.listen(port, function() {
     console.log(`Server started on port ${port}`);
 });
