@@ -4,6 +4,9 @@ let app = new express();
 
 var homepage = require("./homepage");
 
+app.use(express.static(__dirname));
+
+
 app.get("/", function(req, res) {
     res.send(homepage.homepage);
 });
@@ -20,6 +23,8 @@ app.get("/contact", function(req, res) {
 app.get("*", function(req, res) {
     res.send("Not have this page 404");
 });
+
+
 
 let port = 1234;
 app.listen(port, function() {
